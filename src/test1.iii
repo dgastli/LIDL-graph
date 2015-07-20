@@ -1,0 +1,34 @@
+All(
+	When(  LessThan  (  Add(aba,1)  ,  b  )  ,
+	  Affect  (  5  ,   EmitToEither(x,y)  )
+	)
+)
+
+
+
+(
+• (when (((current(a)) > (3)) is (true)): (
+	• ((set(x)) = ((previous(x)) + (7)))
+	• ((set(a)) = ((previous(a)) + (5)))
+	• (when (current(click)), (say ("ok")))
+))
+• (
+	• (when (current(increment)), ((set(desired)) = ((previous(desired))+(1)) ) )
+	• (when (current(decrement)), ((set(desired)) = ((previous(desired))-(1)) ) )
+	• (when (current(reset)), ((set(desired))=(current(actual)))     )
+)
+)
+
+
+
+
+
+
+
+
+
+
+(sin(x:number in)):number out=
+	():=()
+	():=()
+	()

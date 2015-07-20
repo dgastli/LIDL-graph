@@ -1,0 +1,118 @@
+(if Click then "click" else Inactive)
+
+(when Click ,
+  [
+    (Result = (either 0 or 1)),
+
+  ]
+)
+void_emission_$when_$comma_$($1,$2)
+
+()
+
+
+
+
+
+
+
+
+
+
+
+
+void emission userTask
+  (void emission increment, void emission decrement, number reception desiredSpeed, number reception actualSpeed ) :
+  (number data error, number data step) :
+
+  all(
+
+  )
+
+
+
+
+point data :
+  {x:Number,y:Number}
+
+
+point reception (2DPointInputPanel (graphicalRepresentation )) :
+
+  point res
+
+  (return (res) and do (
+
+
+
+  ))
+
+
+void reception (WIMP widget with this behavior: () and this graphical representation : ())
+
+void reception (hmi (graphicalRepresentation emission scene),(),()):
+  scene=
+
+
+((label Text) = (if (Click) then ("click") else (Inactive)))
+
+
+
+
+number reception fact(number reception n)
+  this=n*fact(n-1)
+
+number emission cofact(number emission n)
+  cofact(n-1)=this
+
+
+
+// Si non symmetrie
+
+<type> data (new (<type> data x)):
+  ( receive (x) emit (x) )
+
+void emission (flow (<type> data x)):
+  x=firstActiveOf(change(x),previous(x))
+
+boolean data (activation (<type> data x)):
+  custom
+
+<type> data ( receive (<type> reception x) emit ( <type> emission y) ):
+  custom
+
+<type> data (a):
+  ( receive (x) emit (x) )
+
+
+
+
+void emission (speedcontroller(number emission speed)):
+  all(
+    flow(speed),
+    change(speed)=previous(speed)+increment,
+    change(speed)=previous(speed)-decrement,
+
+  )
+
+
+
+
+
+// Si symmetrie
+
+
+void emission (flow (<type> data x)):
+  next(x)=firstActiveOf(x,previous(x))
+
+
+<type> reception (current (<type> reception x)):
+  firstActiveOf(x,previous(x))
+
+
+void emission speedcontroller():
+  all(
+    flow(speed),
+    speed=previous(speed)+increment,
+    speed=previous(speed)-decrement,
+    current(speed)
+  )

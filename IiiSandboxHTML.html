@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="iii code editor" />
+  <meta charset=utf-8 />
+  <title>III</title>
+  <link rel="stylesheet" type="text/css" href="dist/main.css">
+  <link rel="stylesheet" href="dist/font-awesome/css/font-awesome.min.css">
+  <script src="dist/main.js"></script>
+</head>
+
+<body>
+
+<!--
+  <div id="toolbar"></div>
+
+<div>
+
+  <button type="button" class="btn"><i class="fa fa-play fa-2x"></i></button>
+  <button type="button" class="btn"><i class="fa fa-step-forward fa-2x"></i></button>
+  <button type="button" class="btn"><i class="fa fa-pause fa-2x"></i></button>
+
+</div>
+
+  <table>
+    <tr>
+      <th>Joe </th>
+      <th>Smith</th>
+      <th>50</th>
+      <th>50</th>
+      <th>50</th>
+      <th>LOL</th>
+      <th>Smith</th>
+      <th>50</th>
+      <th>50</th>
+      <th>50</th>
+    </tr>
+    <tr class="evenrow">
+      <td>Eve</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>Eve</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>True</td>
+      <td>False</td>
+      <td>Eve</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr class="evenrow">
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>True</td>
+      <td>False</td>
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr class="evenrow">
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Smith</td>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>True</td>
+      <td>False</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr class="evenrow">
+      <td>Eve</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>Eve</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>True</td>
+      <td>False</td>
+      <td>Eve</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr class="evenrow">
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>True</td>
+      <td>False</td>
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr class="evenrow">
+      <td style="background-color:#ffbdbd">∅</td>
+      <td>Smith</td>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>True</td>
+      <td>False</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>True</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+  </table> -->
+
+<textarea name="textarea" id="theinputfromuser" style="min-width:100%;min-height:20px;height:240px;max-width:100%" >
+(
+• (when (((current(a)) > (3)) is (true)): (
+  • ((set(x)) = ((previous(x)) + (7)))
+  • ((set(a)) = ((previous(a)) + (5)))
+  • (when (current(click)), (say ("ok")))
+))
+• (
+  • (when (current(increment)), ((set(desired)) = ((previous(desired))+(1)) ) )
+  • (when (current(decrement)), ((set(desired)) = ((previous(desired))-(1)) ) )
+  • (when (current(reset)), ((set(desired))=(current(actual)))     )
+)
+)
+</textarea>
+
+<div id="editor"></div>
+
+<div id="graph"></div>
+
+
+
+
+</body>
+
+</html>

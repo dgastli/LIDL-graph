@@ -1,0 +1,112 @@
+button data :
+  {
+    text:text
+  }
+
+void emission (panel with buttons (button reception bouton1) (button reception bouton2) ) :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(panel with buttons {text:"Increment"} {text:"Decrement"})
+
+
+
+
+(Button (HTML)):activation in:
+
+
+
+
+(data (x:text in)) : {in:number in,out:number out} =
+
+  (b) : number = (data("b"))
+
+  (say(a:text in)) : activation in = (pronounce(a)on(soundchannel))
+
+  (random) : number out = (random(time))
+
+
+
+
+
+
+reciprocal {x:number in, y:number in}
+
+
+
+(write factorial list on (x)) : {n:number,x:number} in =
+  (receive (this),
+    ((write factorial list on (x)) = {n:(((this).n)+(1)),x:(((this).x)*((this).n))})
+  )
+
+
+
+//Recursive reception
+// Use :     ((a) = (factorial(n)))
+
+(factorial (n:number in)):number out:
+  (if(n<=0)then(n)else((n)*(factorial((n)-(1)))))
+
+
+(factorial (n:number in)):number out:
+  (emit (this) ,
+    ((this)=(if(n<=0)then(n)else((n)*(factorial((n)-(1))))))
+  )
+
+//Corecursive emission //TODO
+// Use :    ((factorial-1(a)) = (n))
+
+(factorial-1 (a:number out)):number in:
+  (receive (this),
+    (((this)*(factorial-1 (a)))=((this)-(1)))
+  )
+
+
+
+
+
+// Normal
+((a:number in)*(b:number in)):number out:
+  (emit (this),
+    ((this)=((b)*(a)))
+  )
+
+((a:number in)+(b:number in)):number out:
+  (emit (this),
+    ((this)=((b)+(a)))
+  )
+
+
+// Emission
+((a:number in)*(b:number out)):number in:
+  (receive (this),
+    ((b)=((this)/(a)))
+  )
+
+((a:number in)+(b:number out)):number in:
+  (receive (this),
+    ((b)=((this)-(a)))
+  )
